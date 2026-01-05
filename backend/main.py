@@ -1,10 +1,20 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
+from constants import Env
 import os
 
 app = FastAPI()
 
-MONGO_URL = os.getenv("MONGO_URL", "mongodb://mongodb:27017")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[Env.ORIGIN],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+MONGO_URL = Env.MONGO_URL
 client = AsyncIOMotorClient(MONGO_URL)
 db = client.online_catalog
 

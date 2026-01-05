@@ -16,6 +16,7 @@ services:
       - catalog_network
     restart: unless-stopped
 
+
   frontend-prod:
     profiles: ["prod"]
     build:
@@ -35,6 +36,8 @@ services:
       - ${DATA_PATH}/photos:/app/photos
     environment:
       - MONGO_URL=${MONGO_URL}
+      - DATA_PATH=${DATA_PATH}
+      - ORIGIN=${ORIGIN}
     depends_on:
       - mongodb
     networks:
