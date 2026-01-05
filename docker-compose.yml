@@ -1,6 +1,33 @@
 name: "online_catalog"
 
 services:
+
+  frontend-dev:
+    profiles: ["dev"]
+    build:
+      context: ./frontend
+      target: development
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - catalog_network
+    restart: unless-stopped
+
+  frontend-prod:
+    profiles: ["prod"]
+    build:
+      context: ./frontend
+      target: production
+    ports:
+      - "8080:80"
+    networks:
+      - catalog_network
+    restart: unless-stopped
+
+
   backend:
     build: ./backend
     volumes:
