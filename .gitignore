@@ -1,0 +1,52 @@
+
+srcs/backend/static/android-chrome-192x192.png
+srcs/backend/static/android-chrome-512x512.png
+srcs/backend/static/apple-touch-icon.png
+srcs/backend/static/favicon-16x16.png
+srcs/backend/static/favicon-32x32.png
+srcs/backend/static/favicon.ico
+srcs/backend/static/site.webmanifest
+
+data/partstock.db
+data_to_import/
+codebase.txt
+backend.txt
+frontend.txt
+
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Photos and uploads
+#*.jpg
+#*.jpeg
+#*.png
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
