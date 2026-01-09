@@ -43,8 +43,6 @@ services:
       - ./backend/pom.xml:/app/pom.sml:ro
       - maven-cache:/root/.m2
       - ${DATA_PATH}/photos:/app/photos
-    ports:
-      - "8009:8000"
     depends_on:
       - mongodb
     networks:
