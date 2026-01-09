@@ -13,6 +13,12 @@ codebase.txt
 backend.txt
 frontend.txt
 
+# SSL certificates
+ssl/
+*.pem
+*.key
+*.crt
+
 
 # Python
 __pycache__/
