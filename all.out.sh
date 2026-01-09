@@ -9,6 +9,8 @@ OUTPUT_FILE="./zz_all.txt"
 
 # Ignore patterns for Angular project
 IGNORE_PATTERNS=(
+	'!*pem'
+	'!*.md'
 	'!*out.sh'
     '!README.md'
     '!node_modules/**'          # Exclude npm packages
